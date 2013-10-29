@@ -14,7 +14,6 @@
 package net.hires.debug {
 	
 	import flash.display.BitmapData;
-	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Matrix;
@@ -22,9 +21,11 @@ package net.hires.debug {
 	import flash.system.System;
 	import flash.text.StyleSheet;
 	import flash.text.TextField;
-	import flash.utils.getTimer;	
+	import flash.utils.getTimer;
+	
+	import spark.core.SpriteVisualElement;
 
-	public class Stats extends Sprite {	
+	public class Stats extends SpriteVisualElement {	
 
 		protected const WIDTH : uint = 70;
 		protected const HEIGHT : uint = 100;
