@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<project name="Hi-Res-Stats-Library" basedir="." default="build">
+
+  <property name="FLEX_HOME" location="/Users/Bart/Dev/SDK/Flex/4.10.0 FP 11.8 AIR 3.8 en_US" />
+  <property name="deploy.dir" location="bin" />
+  <property name="src.dir" location="src" />
+  <property name="doc.dir" location="doc" />
+
+  <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+
+  <target name="build" description="Builds the library (.swc file), including ASDoc code hints">
+    <!-- compile swc -->
+    <compc output="${deploy.dir}/${ant.project.name}.swc">
+      <include-sources dir="${src.dir}" includes="*" />
+    </compc>
+    <!-- call asdoc to generate dita xml files -->
+    <asdoc output="${doc.dir}/${ant.project.name}" lenient="true" failonerror="true" fork="true">
+      <compiler.source-path path-element="${src.dir}" />
+      <doc-sources path-element="${src.dir}" />
+    </asdoc>
+  </target>
+  
+</project>
