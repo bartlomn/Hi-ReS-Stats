@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <project name="Hi-Res-Stats-Library" basedir="." default="build">
 
-  <property name="FLEX_HOME" location="/Users/Bart/Dev/SDK/Flex/4.10.0 FP 11.8 AIR 3.8 en_US" />
-  <property name="deploy.dir" location="bin" />
-  <property name="src.dir" location="src" />
-  <property name="doc.dir" location="doc" />
-
   <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
 
   <target name="build" description="Builds the library (.swc file), including ASDoc code hints">
